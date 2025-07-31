@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Pattern Watchdog",
+  "version": "1.2",
+  "description": "Flags dark patterns and analyzes toxicity, reports to GitHub.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon128.png"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": [
+    "https://dark-pattern-extension.onrender.com/*",
+    "https://api.github.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

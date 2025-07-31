@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Dark Pattern Watchdog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Dark Pattern Watchdog</h2>
+
+  <textarea id="reportText" placeholder="Describe the dark pattern or paste text..." rows="4"></textarea>
+
+  <button id="check-btn">Check Toxicity</button>
+  <div id="output" style="white-space: pre-wrap; margin-top:6px;"></div>
+
+  <hr />
+
+  <input id="issueTitle" placeholder="GitHub Issue Title" />
+  <textarea id="issueBody" placeholder="GitHub Issue Body" rows="3"></textarea>
+  <input id="githubToken" type="password" placeholder="GitHub Personal Access Token" />
+  <button id="submitIssue">Submit to GitHub</button>
+  <div id="statusMessage"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
